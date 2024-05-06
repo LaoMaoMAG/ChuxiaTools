@@ -1,9 +1,9 @@
 appname="初夏 Tools"
-appver="V1.0 Beta"
+appver="V0.1 Beta"
 appcode="1"
 appsdk="15"
 path_pattern=""
-packagename="com.laomaomag.yiwentoos"
+packagename="com.laomaomag.chuxiatools"
 theme="Theme_Material_Light_NoActionBar"
 app_key=""
 app_channel=""
@@ -12,5 +12,5 @@ description=""
 debugmode=true
 user_permission={
   "INTERNET",
- "WRITE_EXTERNAL_STORAGE"
+  "WRITE_EXTERNAL_STORAGE"
 }

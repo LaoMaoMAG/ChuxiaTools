@@ -11,6 +11,8 @@ import "android.animation.ObjectAnimator"
 import "android.view.animation.Animation$AnimationListener"
 
 local cjson = require "cjson"
+local config = require "config"
+local db = require "db"
 
 
 activity.setTheme(android.R.style.Theme_Material_Light_NoActionBar)
@@ -62,6 +64,9 @@ rewardButtonText.getPaint().setTypeface(typeface2)
 shareButtonText.getPaint().setTypeface(typeface2)
 toolsBottomTipText.getPaint().setTypeface(typeface2)
 collectionTipText.getPaint().setTypeface(typeface2)
+
+
+versionText.setText(config.appver)
 
 
 local pageInit = false
@@ -119,6 +124,27 @@ local setPageButton = function (index)
 
     pageIndex = index
   end)
+end
+
+
+-- 设置logo图像
+local datadb = db.open(config.filePath.dbFile)
+if not datadb:has("logo") then datadb:set("logo", 1) end
+logoImage.setImageBitmap(loadbitmap(config.logoTable[datadb:get("logo")]))
+datadb:close()
+
+
+-- 单击logo图像事件
+logoImage.onClick = function(v)
+  local datadb = db.open(config.filePath.dbFile)
+  if not datadb:has("logo") then datadb:set("logo", 1) end
+  if config.logoTable[datadb:get("logo") + 1] == nil then
+    datadb:set("logo", 1)
+   else
+    datadb:set("logo", datadb:get("logo") + 1)
+  end
+  logoImage.setImageBitmap(loadbitmap(config.logoTable[datadb:get("logo")]))
+  datadb:close()
 end
 
 
@@ -395,9 +421,56 @@ for key, value in pairs(gridItem) do
 end
 
 
+-- 设置背景图像
+local datadb = db.open(config.filePath.dbFile)
+if not datadb:has("back") then datadb:set("back", 0) end
+if config.logoTable[datadb:get("back") + 1] == nil then
+  datadb:set("back", 1)
+ else
+  datadb:set("back", datadb:get("back") + 1)
+end
+backImage.setImageBitmap(loadbitmap(config.backTable[datadb:get("back")]))
+datadb:close()
 
+
+-- 下拉刷新背景
 imagePulling.onRefresh=function(v)
+  local datadb = db.open(config.filePath.dbFile)
+  if not datadb:has("back") then datadb:set("back", 1) end
+  if config.backTable[datadb:get("back") + 1] == nil then
+    datadb:set("back", 1)
+   else
+    datadb:set("back", datadb:get("back") + 1)
+  end
+  backImage.setImageBitmap(loadbitmap(config.backTable[datadb:get("back")]))
+  datadb:close()
   v.refreshFinish(0)
 end
 
+
+-- 打开数据库
+local datadb = db.open({
+  path = config.filePath.dbFile,
+  can_each = true -- 开启遍历支持
+})
+
+
+-- 更新收藏表
+updateCollectionTable = function ()
+  -- 判断是否隐藏收藏空提示
+  if datadb:has("collectionTable") == nil then
+    collectionLayout.setVisibility(View.VISIBLE)
+   else
+    collectionLayout.setVisibility(View.GONE)
+  end
+
+  if datadb:has("collectionTable") then datadb:close() return end
+
+  for key, value in collectionTable do
+    print(key, value)
+  end
+
+  -- 关闭数据库
+  datadb:close()
+end
 

@@ -1,19 +1,20 @@
 {
   LinearLayout;
-  backgroundColor="0xFFFFFFFF";
+  layout_width="fill";
   layout_height="fill";
   gravity="center";
-  layout_width="fill";
+  backgroundColor="0xFFFFFFFF";
   {
     RelativeLayout;
-    layout_width="match_parent";
     layout_height="match_parent";
+    layout_width="match_parent";
     {
       ImageView;
-      src="res/image/background1.png";
-      layout_width="match_parent";
-      scaleType="centerCrop";
+      id="backImage";
       layout_height="match_parent";
+      scaleType="centerCrop";
+      layout_width="match_parent";
+      src="res/image/background1.png";
     };
     {
       PullingLayout;
@@ -21,17 +22,17 @@
       PullDownEnabled=true;
       {
         ScrollView;
-        layout_width="match_parent";
         layout_height="match_parent";
+        layout_width="match_parent";
         {
           LinearLayout;
           orientation="vertical";
-          layout_height="wrap_content";
           layout_width="match_parent";
+          layout_height="wrap_content";
           {
             LinearLayout;
-            layout_width="match_parent";
             layout_height="20%h";
+            layout_width="match_parent";
           };
           {
             RelativeLayout;
@@ -42,53 +43,53 @@
               layout_width="match_parent";
               {
                 CardView;
-                radius="40dp";
-                Elevation="10";
-                layout_width="match_parent";
-                CardBackgroundColor="0xFFFFFFFF";
                 layout_marginTop="5dp";
+                radius="40dp";
+                CardBackgroundColor="0xFFFFFFFF";
+                Elevation="10";
                 layout_height="200dp";
+                layout_width="match_parent";
               };
             };
             {
               LinearLayout;
               orientation="vertical";
+              gravity="top|center";
               backgroundColor="0xFFFFFFFF";
               layout_marginTop="110dp";
-              gravity="top|center";
               layout_width="match_parent";
               {
                 TextView;
-                text="初夏 Tools";
+                id="nameText";
                 textColor="0xFF000000";
                 textSize="30";
-                id="nameText";
+                text="初夏 Tools";
               };
               {
                 TextView;
-                text="V1.0";
+                id="versionText";
                 textColor="0xFF000000";
                 textSize="18";
-                id="versionText";
+                text="V1.0";
               };
               {
                 TextView;
-                textSize="15";
                 layout_marginTop="5dp";
-                text=[==[「本项目已在GitHub开源.」
-「这是一款由个人制作的综合运行时工具箱.」]==];
-                textColor="0xFF595959";
                 gravity="center";
                 id="introductionText";
+                textColor="0xFF595959";
+                textSize="15";
+                text=[==[「本项目已在GitHub开源.」
+「这是一款由个人制作的综合运行时工具箱.」]==];
               };
               {
                 LinearLayout;
                 orientation="horizontal";
-                layout_marginRight="30dp";
-                layout_width="match_parent";
-                layout_marginTop="5dp";
                 layout_marginLeft="30dp";
                 layout_height="75dp";
+                layout_marginTop="5dp";
+                layout_marginRight="30dp";
+                layout_width="match_parent";
                 {
                   LinearLayout;
                   gravity="center";
@@ -96,24 +97,24 @@
                   {
                     LinearLayout;
                     orientation="vertical";
-                    layout_height="match_parent";
-                    gravity="center";
                     id="chatButton";
+                    gravity="center";
+                    layout_height="match_parent";
                     {
                       ImageView;
                       layout_marginRight="10dp";
-                      layout_width="45dp";
+                      layout_marginLeft="10dp";
+                      layout_height="45dp";
                       src="res/image/icons8-chat.png";
-                      layout_marginLeft="10dp";
-                      layout_height="45dp";
+                      layout_width="45dp";
                     };
                     {
                       TextView;
-                      textSize="13";
                       layout_marginTop="5dp";
-                      textColor="0xFF000000";
-                      text="交流群聊";
                       id="chatButtonText";
+                      text="交流群聊";
+                      textSize="13";
+                      textColor="0xFF000000";
                     };
                   };
                 };
@@ -129,24 +130,24 @@
                   {
                     LinearLayout;
                     orientation="vertical";
-                    layout_height="match_parent";
-                    gravity="center";
                     id="shareButton";
+                    gravity="center";
+                    layout_height="match_parent";
                     {
                       ImageView;
                       layout_marginRight="10dp";
-                      layout_width="45dp";
-                      src="res/image/icons8-share.png";
                       layout_marginLeft="10dp";
                       layout_height="45dp";
+                      src="res/image/icons8-share.png";
+                      layout_width="45dp";
                     };
                     {
                       TextView;
-                      textSize="13";
                       layout_marginTop="5dp";
-                      textColor="0xFF000000";
-                      text="分享软件";
                       id="shareButtonText";
+                      text="分享软件";
+                      textSize="13";
+                      textColor="0xFF000000";
                     };
                   };
                 };
@@ -162,81 +163,81 @@
                   {
                     LinearLayout;
                     orientation="vertical";
-                    layout_height="match_parent";
-                    gravity="center";
                     id="rewardButton";
+                    gravity="center";
+                    layout_height="match_parent";
                     {
                       ImageView;
                       layout_marginRight="10dp";
-                      layout_width="45dp";
-                      src="res/image/icons8-receive-cash.png";
                       layout_marginLeft="10dp";
                       layout_height="45dp";
+                      src="res/image/icons8-receive-cash.png";
+                      layout_width="45dp";
                     };
                     {
                       TextView;
-                      textSize="13";
                       layout_marginTop="5dp";
-                      textColor="0xFF000000";
-                      text="打赏捐赠";
                       id="rewardButtonText";
+                      text="打赏捐赠";
+                      textSize="13";
+                      textColor="0xFF000000";
                     };
                   };
                 };
               };
               {
                 TextView;
-                text="开发人员";
-                textSize="23";
                 layout_marginRight="15dp";
-                layout_width="match_parent";
+                layout_marginLeft="15dp";
                 layout_marginTop="5dp";
                 textColor="0xFF000000";
-                layout_marginLeft="15dp";
                 id="developerText";
+                layout_width="match_parent";
+                textSize="23";
+                text="开发人员";
               };
               {
                 LinearLayout;
                 orientation="horizontal";
-                layout_marginRight="15dp";
-                layout_width="match_parent";
                 layout_marginLeft="15dp";
                 layout_height="110dp";
+                layout_marginRight="15dp";
+                layout_width="match_parent";
                 {
                   CardView;
-                  radius="10dp";
-                  layout_marginRight="3dp";
                   layout_marginTop="5dp";
-                  layout_marginLeft="5dp";
-                  layout_weight="1";
+                  radius="10dp";
                   layout_width="match_parent";
+                  layout_marginRight="3dp";
                   backgroundColor="#A5D6A7";
                   layout_marginBottom="5dp";
+                  layout_marginLeft="5dp";
+                  layout_weight="1";
                   layout_height="match_parent";
                   {
                     LinearLayout;
                     orientation="vertical";
-                    layout_height="match_parent";
                     layout_width="match_parent";
+                    layout_height="match_parent";
                     {
                       LinearLayout;
                       layout_marginRight="5dp";
-                      layout_width="match_parent";
-                      layout_marginTop="5dp";
                       layout_marginLeft="5dp";
                       gravity="left|center";
                       layout_height="50dp";
+                      layout_marginTop="5dp";
+                      layout_width="match_parent";
                       {
                         CardView;
+                        layout_height="50dp";
                         radius="25dp";
                         elevation="0";
                         layout_width="50dp";
-                        layout_height="50dp";
                         {
                           ImageView;
-                          layout_width="match_parent";
-                          src="res/image/head-xiaoyi.jpg";
                           layout_height="match_parent";
+                          src="res/image/head-xiaoyi.jpg";
+                          layout_width="match_parent";
                         };
                       };
                       {
@@ -246,70 +247,70 @@
                         layout_width="match_parent";
                         {
                           TextView;
-                          text="依蚊";
+                          id="developerNameText1";
                           textColor="0xFFFFFFFF";
                           textSize="20";
-                          id="developerNameText1";
+                          text="依蚊";
                         };
                         {
                           TextView;
-                          text="Yiwen";
+                          id="developerEnNameText1";
                           textColor="0xFF595959";
                           textSize="13";
-                          id="developerEnNameText1";
+                          text="Yiwen";
                         };
                       };
                     };
                     {
                       TextView;
-                      textSize="13";
-                      layout_marginRight="7dp";
                       layout_marginTop="5dp";
                       layout_marginLeft="7dp";
                       id="developerLabelText1";
+                      textSize="13";
                       layout_width="match_parent";
+                      layout_marginRight="7dp";
                       layout_marginBottom="5dp";
-                      textColor="0xFF000000";
-                      layout_height="match_parent";
                       text="初闻不解曲中意，再听已是曲中人。";
+                      layout_height="match_parent";
+                      textColor="0xFF000000";
                     };
                   };
                 };
                 {
                   CardView;
-                  radius="10dp";
-                  layout_marginRight="5dp";
                   layout_marginTop="5dp";
-                  layout_marginLeft="3dp";
-                  layout_weight="1";
+                  radius="10dp";
                   layout_width="match_parent";
+                  layout_marginRight="5dp";
                   backgroundColor="#A5D6A7";
                   layout_marginBottom="5dp";
+                  layout_marginLeft="3dp";
+                  layout_weight="1";
                   layout_height="match_parent";
                   {
                     LinearLayout;
                     orientation="vertical";
-                    layout_height="match_parent";
                     layout_width="match_parent";
+                    layout_height="match_parent";
                     {
                       LinearLayout;
                       layout_marginRight="5dp";
-                      layout_width="match_parent";
-                      layout_marginTop="5dp";
                       layout_marginLeft="5dp";
                       gravity="left|center";
                       layout_height="50dp";
+                      layout_marginTop="5dp";
+                      layout_width="match_parent";
                       {
                         CardView;
+                        layout_height="50dp";
                         radius="25dp";
                         elevation="0";
                         layout_width="50dp";
-                        layout_height="50dp";
                         {
                           ImageView;
-                          layout_width="match_parent";
-                          src="res/image/head-laomao.jpg";
                           layout_height="match_parent";
+                          src="res/image/head-laomao.jpg";
+                          layout_width="match_parent";
                         };
                       };
                       {
@@ -319,56 +320,56 @@
                         layout_width="match_parent";
                         {
                           TextView;
-                          text="猫猫";
+                          id="developerNameText2";
                           textColor="0xFFFFFFFF";
                           textSize="20";
-                          id="developerNameText2";
+                          text="猫猫";
                         };
                         {
                           TextView;
-                          text="LaoMao MAG";
+                          id="developerEnNameText2";
                           textColor="0xFF595959";
                           textSize="13";
-                          id="developerEnNameText2";
+                          text="LaoMao MAG";
                         };
                       };
                     };
                     {
                       TextView;
-                      textSize="13";
-                      layout_marginRight="7dp";
                       layout_marginTop="5dp";
                       layout_marginLeft="7dp";
                       id="developerLabelText2";
+                      textSize="13";
                       layout_width="match_parent";
+                      layout_marginRight="7dp";
                       layout_marginBottom="5dp";
-                      textColor="0xFF000000";
-                      layout_height="match_parent";
                       text="这不是一般的猫猫，这是王维诗里的猫猫∠( ᐛ 」∠)_";
+                      layout_height="match_parent";
+                      textColor="0xFF000000";
                     };
                   };
                 };
               };
               {
                 LinearLayout;
-                layout_width="match_parent";
                 layout_height="200dp";
+                layout_width="match_parent";
               };
               {
                 TextView;
+                layout_height="40dp";
+                gravity="center";
+                textColor="0xFF595959";
+                id="aboutBottomTipText";
+                layout_width="match_parent";
                 textSize="13";
                 text=[==[图标素材来源于icon8.com
 部分资源来源于网络，如有侵权请联系作者进行更正]==];
-                layout_width="match_parent";
-                id="aboutBottomTipText";
-                textColor="0xFF595959";
-                gravity="center";
-                layout_height="40dp";
               };
               {
                 LinearLayout;
-                layout_width="match_parent";
                 layout_height="80dp";
+                layout_width="match_parent";
               };
             };
             {
@@ -377,18 +378,19 @@
               layout_width="match_parent";
               {
                 CardView;
-                radius="20dp";
-                layout_marginBottom="5dp";
                 layout_marginTop="5dp";
-                alpha="20dp";
+                radius="20dp";
                 CardBackgroundColor="0xFFFFFFFF";
-                layout_width="100dp";
+                layout_marginBottom="5dp";
                 layout_height="100dp";
+                alpha="20dp";
+                layout_width="100dp";
                 {
                   ImageView;
-                  layout_width="match_parent";
-                  src="res/image/logo1.png";
+                  id="logoImage";
                   layout_height="match_parent";
+                  src="res/image/logo1.png";
+                  layout_width="match_parent";
                 };
               };
             };

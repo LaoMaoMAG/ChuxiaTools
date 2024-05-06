@@ -15,7 +15,8 @@ local luajava = require("luajava")
 compile "libs/kuanAnimation"
 import "com.wuyr.rippleanimation.*"
 
-local db = require 'db'
+local db = require "db"
+local config = require "config"
 
 
 activity.setTheme(android.R.style.Theme_Material_Light_NoActionBar)
@@ -57,18 +58,19 @@ nameText.getPaint().setTypeface(typeface1)
 versionText.getPaint().setTypeface(typeface1)
 
 
---设置图片
-local imagetable =
-{
-  "res/image/logo1.png";
-  "res/image/logo2.png";
-  "res/image/logo3.png";
-  "res/image/logo4.png";
-  "res/image/logo5.png";
-}
+versionText.setText(config.appver)
 
 
-image.setImageBitmap(loadbitmap(imagetable[5]))
+-- 显示轮播Logo图片
+local datadb = db.open(config.filePath.dbFile)
+if not datadb:has("logo") then datadb:set("logo", 0) end
+if config.logoTable[datadb:get("logo") + 1] == nil then
+  datadb:set("logo", 1)
+ else
+  datadb:set("logo", datadb:get("logo") + 1)
+end
+image.setImageBitmap(loadbitmap(config.logoTable[datadb:get("logo")]))
+datadb:close()
 
 
 --波纹动画
