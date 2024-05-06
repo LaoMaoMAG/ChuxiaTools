@@ -1,0 +1,22 @@
+{
+  LinearLayout;
+  layout_width="fill";
+  orientation="vertical";
+  layout_height="fill";
+  {
+    GridView;
+    id="grid";
+    layout_width="match_parent";
+    numColumns=4;
+  };
+  {
+    LinearLayout;
+    gravity="top|center";
+    layout_width="match_parent";
+    {
+      Button;
+      text="stop";
+      id="stop";
+    };
+  };
+};

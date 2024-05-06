@@ -1,0 +1,131 @@
+{
+  LinearLayout,
+  orientation="vertical",
+  layout_width="fill",
+  layout_height="fill",
+  gravity="center",
+  {
+    TextView,
+    text="请选择类型",
+    
+  },
+  {
+    LinearLayout,
+    layout_marginTop="15dp",
+    gravity="center",
+    
+    {
+      Button,
+      text="我要发文件",
+      allCaps=false,
+      onClick=function(v)
+        import "server"
+        发文件.visibility=0
+        
+      end,
+      layout_width="fill",
+    },
+    {
+      Button,
+      text="我要收文件",
+      allCaps=false,
+      onClick=function()
+        import "client"
+        
+        连接.visibility=0
+      end,
+      layout_width="fill",
+    },
+  },
+  {
+    LinearLayout,
+    id="发文件",
+    visibility=8,
+    layout_marginTop="15dp",
+    gravity="center",
+    orientation="vertical",
+    layout_marginLeft="30dp",
+    layout_marginRight="30dp",
+    {
+      EditText,
+      hint="待发送文件路径", 
+      layout_marginLeft="30dp",
+    layout_marginRight="30dp",   
+    } ,
+    {
+      Button,
+      text="发送",
+      onClick=function(v)
+        ipPath.parent.visibility=0
+        ipPath.text="请在接收端填入当前ip地址:"..server.getNowIp()
+        server.start()
+        server.filePath=v.parent.getChildAt(0).text
+      end,
+    }
+  },
+ {
+    LinearLayout,
+    id="连接",
+    visibility=8,
+    layout_marginTop="15dp",
+    gravity="center",
+    orientation="vertical",
+    layout_marginLeft="30dp",
+    layout_marginRight="30dp",
+    {
+      EditText,
+      hint="输入待连接ip地址",
+      layout_marginLeft="30dp",
+    layout_marginRight="30dp",
+    } ,
+    {
+      Button,
+      text="连接",
+      onClick=function(v)
+        client.connect(v.parent.getChildAt(0).text)
+      end,
+    }
+  },
+  {
+    LinearLayout,
+    layout_marginTop="20dp",
+    layout_gravity="bottom",
+    layout_gravity="bottom|center",
+    layout_marginLeft="30dp",
+    layout_marginRight="30dp",
+    visibility=8,
+    {
+      TextView,
+      id="ipPath",
+      text="请在接收端填入当前ip地址:192.168.1.24"
+    },
+  },
+  {
+    LinearLayout,
+    layout_marginTop="20dp",
+    layout_gravity="bottom",
+    layout_gravity="bottom|center",
+    paddingLeft="60dp",
+    paddingRight="60dp",
+    {
+      TextView,
+      id="text",
+      text="当前状态:准备就绪"
+    },
+  },
+
+ {
+    LinearLayout,
+    layout_marginTop="20dp",
+    layout_gravity="bottom",
+    layout_gravity="bottom|center",
+    paddingLeft="60dp",
+    paddingRight="60dp",
+    {
+      TextView,
+      id="tips",
+      text="提示:使用前请确保手机都在同一局域网"
+    },
+  }
+
+}

@@ -1,0 +1,15 @@
+{
+  LinearLayout;
+  layout_width="fill";
+  layout_height="fill";
+  orientation="vertical";
+  {
+    TextView;
+    layout_height="fill";
+    gravity="center";
+    text="摇晃手机发电点亮手电筒QAQ";
+    layout_width="fill";
+    layout_gravity="center";
+    textSize="20sp";
+  };
+};

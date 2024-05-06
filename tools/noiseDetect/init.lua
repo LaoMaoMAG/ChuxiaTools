@@ -1,0 +1,16 @@
+appname="仿一个木函噪音测量"
+appver="1.0"
+appcode="1"
+appsdk="15"
+path_pattern=""
+packagename="com.androlua.demo"
+theme="Theme_DeviceDefault_Light_NoActionBar_TranslucentDecor"
+app_key=""
+app_channel=""
+developer=""
+description=""
+debugmode=true
+user_permission={
+  "INTERNET",
+  "WRITE_EXTERNAL_STORAGE"
+}

@@ -1,0 +1,15 @@
+appname="尺子"
+appver="1.0"
+appcode="1"
+appsdk="15"
+path_pattern=""
+packagename="com.androlua.helloworld"
+theme="Theme_Material_Light_NoActionBar_Fullscreen"
+app_key=""
+app_channel=""
+developer=""
+description=""
+debugmode=true
+user_permission={
+  "WRITE_EXTERNAL_STORAGE"
+}

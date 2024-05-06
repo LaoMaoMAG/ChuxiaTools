@@ -1,0 +1,9 @@
+appname="动能手电筒"
+appver="1.0"
+packagename="com.androlua.helloworld"
+appcode="1"
+appsdk="15"
+theme="Theme_DeviceDefault_Light_NoActionBar"
+user_permission={
+  "WRITE_EXTERNAL_STORAGE",
+}

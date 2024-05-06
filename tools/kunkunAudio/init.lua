@@ -1,0 +1,21 @@
+--名称
+appname="小黑鸡"
+--版本号
+appver="1.0"
+--版本
+appcode="1"
+--SDK
+appsdk="15"
+--包名
+packagename="com.xhj"
+--调试模式
+debugmode=false
+--应用权限
+user_permission={
+  "INTERNET",
+  "WRITE_EXTERNAL_STORAGE",
+}
+--跳过编译
+skip_compilation={
+
+}

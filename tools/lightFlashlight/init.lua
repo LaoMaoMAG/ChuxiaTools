@@ -1,0 +1,9 @@
+appname="光能手电筒"
+appver="1.0"
+packagename="com.andlua.demo"
+appcode="1"
+appsdk="15"
+debugmode=true
+user_permission={
+  "WRITE_EXTERNAL_STORAGE",
+}

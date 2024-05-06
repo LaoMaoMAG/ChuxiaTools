@@ -1,0 +1,89 @@
+{
+  FrameLayout,
+  layout_height="fill";
+  layout_width="fill";
+
+
+
+  {
+    LinearLayout;
+    orientation="vertical";
+    layout_height="fill";
+    layout_width="fill";
+    Gravity="center|top",
+    {
+      TextView;
+      layout_height="300",
+      layout_width="fill",
+      layout_marginLeft="30",
+      id="tv",
+    };
+  },
+
+
+  {
+    LinearLayout,
+    layout_height="fill",
+    layout_width="fill",
+    Gravity="center",
+    {
+      TextView,
+      layout_height="300",
+      layout_width="300",
+      text=tostring(0),
+      Gravity="center",
+      textColor="#ffffff",
+      textSize="60",
+      id="tv4",
+    },
+  },
+
+
+
+  {
+    LinearLayout,
+    layout_height="fill",
+    layout_width="fill",
+    Gravity="center",
+    {
+      TextView,
+      layout_height="300",
+      layout_width="300",
+      text=tostring(0),
+      Gravity="center",
+      paddingTop="150",
+      paddingLeft="150",
+      textColor="#ffffff",
+      textSize="30",
+      id="tv5",
+    },
+  },
+
+
+
+  {
+    LinearLayout,
+    orientation="vertical",
+    layout_height="fill",
+    layout_width="fill",
+    id="tv2",
+    {
+      LinearLayout,
+      layout_height="fill",
+      layout_width=mm*2,
+      Gravity="center",
+      layout_marginLeft="30"+mm,
+      id="tv3",
+      {
+        TextView,
+        layout_height="fill",
+        layout_width="4",
+        background="#808080",
+      },
+    },
+
+  },
+
+
+
+}
